@@ -3,7 +3,7 @@ require 'net/http'
 require 'fileutils'
 require 'yaml'
 
-module BookInit
+module Init
   def self.load_settings(file_path, flag)
     downloads = []
 

@@ -7,7 +7,7 @@ java_import 'org.glytoucan.Archetype'
 java_import 'org.glycoinfo.WURCSFramework.wurcs.graph.WURCSGraph'
 java_import 'org.glycoinfo.WURCSFramework.util.WURCSException'
 
-module GlycoBook
+module GlyDevKit
 class GlyTouCan
   def archetype(w)
     Hash[Archetype.beBorn(w)]

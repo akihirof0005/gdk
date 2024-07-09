@@ -9,7 +9,7 @@ java_import 'org.glycoinfo.subsumption.util.GraphManagerException'
 java_import 'org.glycoinfo.WURCSFramework.util.WURCSException'
 java_import 'org.glycoinfo.subsumption.generator.Topology'
 
-module GlycoBook
+module GlyDevKit
 class Subsumption
 
   def topology(w)

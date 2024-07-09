@@ -1,7 +1,7 @@
 require 'rdf'
 require 'rdf/turtle'
 
-module GlycoBook
+module GlyDevKit
   class GlyCosmosRdfNamespace
     GLYTOUCAN = RDF::Vocabulary.new("http://rdf.glycoinfo.org/glycan/")
     GLYCAN = RDF::Vocabulary.new("http://purl.jp/bio/12/glyco/glycan#")

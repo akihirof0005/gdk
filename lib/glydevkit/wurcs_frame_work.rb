@@ -1,6 +1,6 @@
 require 'java'
 
-module GlycoBook
+module GlyDevKit
 
   class WurcsFrameWork
 

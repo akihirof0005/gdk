@@ -22,7 +22,7 @@ java_import 'java.io.StringWriter'
 java_import 'java.io.IOException'
 java_import 'java.io.StringReader'
 
-module GlycoBook
+module GlyDevKit
 class MolWURCS
 # @param [String] w String of WURCS
 # @param [String] format: smiles or sdf
