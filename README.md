@@ -39,9 +39,15 @@ gem install iruby && iruby register --force
 
 ### GlyDevKit
 
+#### stable version 
+
 ```bash
 gem install glydevkit --pre
-#This command has an issue because it will fail the first time, so please try again. 
+ruby -r init -e Init.run
+```
+#### development version 
+```bash
+gem install glydevkit --pre
 ruby -r init -e Init.run
 ```
 
