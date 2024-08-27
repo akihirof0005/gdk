@@ -42,7 +42,7 @@ gem install iruby && iruby register --force
 ```bash
 gem install glydevkit --pre
 #This command has an issue because it will fail the first time, so please try again. 
-ruby -r bookinit -e BookInit.run
+ruby -r init -e Init.run
 ```
 
 ## Build (for develop)
