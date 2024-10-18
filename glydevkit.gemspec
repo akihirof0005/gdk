@@ -1,11 +1,11 @@
 Gem::Specification.new do |spec|
   spec.name          = 'glydevkit'
-  spec.version       = '0.2.0-beta.3'
+  spec.version       = '0.2.0-beta.4'
   spec.authors       = ['Akihiro Fujita']
   spec.email         = ['akihirof0005@gmail.com']
   spec.date          = '2024-10-18'
-  spec.summary       = 'The Glycoscience Development Kit (GlyDevKit) is a JRuby library for glycaninformatics'
-  spec.description   = 'The Glycoscience Development Kit (GlyDevKit) is a JRuby library for glycaninformatics'
+  spec.summary       = 'The Glycoscience Development Kit (GlyDevKit) is a JRuby library for glyco-informatics'
+  spec.description   = 'The Glycoscience Development Kit (GlyDevKit) is a JRuby library for glyco-informatics'
   spec.homepage      = 'https://github.com/akihirof0005/glydevkit/blob/main/README.md'
   spec.license       = 'LGPL-3.0-only'
   spec.files         = ["lib/glydevkit/Loggerinit.rb",
@@ -13,6 +13,7 @@ Gem::Specification.new do |spec|
                         "lib/glydevkit/glycan_format_converter.rb",
                         "lib/glydevkit/subsumption.rb",
                         "lib/glydevkit/gly_tou_can.rb",
+                        "lib/glydevkit/glytoucan_data_handler.rb",
                         "lib/glydevkit/glycan_builder.rb",
                         'lib/glydevkit/mol_wurcs.rb',
                         "lib/glydevkit.rb",

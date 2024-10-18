@@ -2,6 +2,9 @@ require 'open-uri'
 require 'net/http'
 require 'fileutils'
 require 'yaml'
+require 'digest'
+require 'fileutils'
+
 
 module Init
 
@@ -67,7 +70,44 @@ Set recommended Java library version? (No/yes)
       end
     end
   end
+  
+  def self.switch_WFW_version(version)
+    base = File.dirname(__FILE__) + "/jar/"
+    
+    source_file = File.join(base, "wurcsframework-#{version}.jar")
+    destination_file = File.join(base, "wurcsframework.jar")
+  
+    if File.exist?(source_file)
+      begin
+        FileUtils.cp(source_file, destination_file)
+        puts "Switched to version #{version} successfully!"
+      rescue StandardError => e
+        puts "Failed to switch versions: #{e.message}"
+      end
+    else
+      puts "Source file #{source_file} does not exist."
+    end
+  end
 
+  def self.check_WFW_version()
+    target_file_path = File.dirname(__FILE__) + '/jar/wurcsframework.jar'  
+    folder_path = File.dirname(__FILE__) + '/jar' 
+  
+    matching_files = find_matching_files(target_file_path, folder_path)
+  
+    unless matching_files.empty?
+      matching_files.each do |file|
+        version = extract_version_from_filename(file)
+        if version
+          puts "version number: #{version}"
+        else
+          puts ""
+        end
+      end
+    end
+  end
+
+  private
   # Loads the settings from a YAML file and prepares the environment.
   #
   # @param file_path [String] The path to the settings file.
@@ -98,4 +138,40 @@ Set recommended Java library version? (No/yes)
 
     downloads
   end
+
+  def self.calculate_file_hash(file_path)
+    hash_func = Digest::SHA256.new
+    begin
+      File.open(file_path, 'rb') do |file|
+        while chunk = file.read(8192)
+          hash_func.update(chunk)
+        end
+      end
+    rescue IOError => e
+      puts "ファイルの読み込み中にエラーが発生しました: #{file_path}, エラー: #{e}"
+      return nil
+    end
+    hash_func.hexdigest
+  end
+  
+  def self.find_matching_files(target_file_path, folder_path)
+    target_file_hash = calculate_file_hash(target_file_path)
+    return unless target_file_hash
+  
+    matching_files = Dir.glob("#{folder_path}/**/*").select do |file_path|
+      next unless File.file?(file_path)
+      next if File.identical?(target_file_path, file_path) 
+  
+      file_hash = calculate_file_hash(file_path)
+      file_hash == target_file_hash unless file_hash.nil?
+    end
+  
+    matching_files
+  end
+  
+  def self.extract_version_from_filename(filename)
+    match_data = filename.match(/-(\d+\.\d+\.\d+)\.jar$/)
+    match_data ? match_data[1] : nil
+  end
+
 end
