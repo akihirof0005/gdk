@@ -138,6 +138,5 @@ module GlyDevKit
         end
         return ret
     end
-
   end
 end
