@@ -22,7 +22,8 @@ Gem::Specification.new do |spec|
   spec.metadata = {
                         "source_code_uri" => "https://github.com/akihirof0005/glydevkit",
                         "homepage_uri" => "https://github.com/akihirof0005/glydevkit/blob/main/README.md",
-                        "changelog_uri" => "https://github.com/akihirof0005/glydevkit"
+                        "changelog_uri" => "https://github.com/akihirof0005/glydevkit".
+                        "documentation" => "https://akihirof0005.github.io/glydevkit/index.html"
                   }
   spec.platform       = 'java'
   spec.add_dependency 'java',  '~> 0.0.2'
