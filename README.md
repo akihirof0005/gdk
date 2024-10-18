@@ -42,10 +42,11 @@ gem install iruby && iruby register --force
 #### stable version 
 
 ```bash
-gem install glydevkit --pre
+gem install glydevkit
 ruby -r init -e Init.run
 ```
-#### development version 
+
+#### latest version 
 ```bash
 gem install glydevkit --pre
 ruby -r init -e Init.run

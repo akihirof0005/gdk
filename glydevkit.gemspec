@@ -1,9 +1,9 @@
 Gem::Specification.new do |spec|
   spec.name          = 'glydevkit'
-  spec.version       = '0.2.beta.1'
+  spec.version       = '0.2.0-beta.2'
   spec.authors       = ['Akihiro Fujita']
   spec.email         = ['akihirof0005@gmail.com']
-  spec.date          = '2024-08-27'
+  spec.date          = '2024-10-18'
   spec.summary       = 'The Glycoscience Development Kit (GlyDevKit) is a JRuby library for glycaninformatics'
   spec.description   = 'The Glycoscience Development Kit (GlyDevKit) is a JRuby library for glycaninformatics'
   spec.homepage      = 'https://github.com/akihirof0005/glydevkit/blob/main/README.md'
@@ -22,8 +22,8 @@ Gem::Specification.new do |spec|
   spec.metadata = {
                         "source_code_uri" => "https://github.com/akihirof0005/glydevkit",
                         "homepage_uri" => "https://github.com/akihirof0005/glydevkit/blob/main/README.md",
-                        "changelog_uri" => "https://github.com/akihirof0005/glycobooks",
-                        }
+                        "changelog_uri" => "https://github.com/akihirof0005/glydevkit"
+                  }
   spec.platform       = 'java'
   spec.add_dependency 'java',  '~> 0.0.2'
 end

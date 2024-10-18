@@ -2,12 +2,22 @@ require 'java'
 
 module GlyDevKit
 
-  class WurcsFrameWork
+  class WURCSFramework
 
-    require_relative  '../jar/wurcsframework.jar'
+    # Import the JAR file
+    require_relative '../jar/wurcsframework.jar'
     java_import 'org.glycoinfo.WURCSFramework.util.validation.WURCSValidator'
-    
-    def validator(w,maxbranch)
+
+    # Validates a WURCS data string.
+    #
+    # @param w [String] The WURCS string to be validated.
+    # @param maxbranch [Integer] The maximum allowed branch count for validation.
+    # @return [Hash] A hash containing the validation results, including any warnings, errors, and unverifiable issues.
+    #
+    # @example
+    #   wurcs = "WURCS=2.0/3,5,4/[a2122h-1b_1-5_2*NCC/3=O][a1122h-1b_1-5][a1122h-1a_1-5]/1-1-2-3-3/a4-b1_b4-c1_c3-d1_c6-e1"
+    #   result = validator(wurcs, 10)
+    def validator(w, maxbranch)
       validator = WURCSValidator.new
       validator.setMaxBranchCount(maxbranch)
       validator.start(w)
@@ -25,6 +35,11 @@ module GlyDevKit
       }
     end
 
+
+    # Converts WURCS data to a graph object.
+    #
+    # @param w [String] WURCS format data
+    # @return [Object, nil] Graph object or nil if an error occurs
     def to_graph(w)
       wgn = WURCSGraphNormalizer.new
       begin
@@ -38,6 +53,12 @@ module GlyDevKit
       end
     end
     
+    # Retrieves the anomeric status of a backbone.
+    # @param a_o_backbone [Backbone] The backbone object to evaluate.
+    # @return [String, nil] A string representing the anomeric status, or nil if it cannot be determined.
+    #
+    # @example
+    #   status = get_anomeric_status(backbone)
     def get_anomeric_status(a_o_backbone)
       a_o_backbone.get_backbone_carbons.each do |t_o_bc|
         return "archetype_anomer" if %w[u U].include?(t_o_bc.get_descriptor.get_char.chr)
@@ -55,6 +76,11 @@ module GlyDevKit
       end
     end
 
+
+    # Retrieves the ring type of a backbone.
+    #
+    # @param a_o_backbone [Object] Backbone object
+    # @return [String, nil] Ring type as a string or nil if not applicable
     def get_ring_type(a_o_backbone)
       a_o_backbone.get_backbone_carbons.each do |t_o_bc|
         return "archetype_ringtype" if %w[u U].include?(t_o_bc.get_descriptor.get_char.chr)
@@ -79,6 +105,10 @@ module GlyDevKit
       nil
     end
 
+    # Calculates the mass of a WURCS data string.
+    #
+    # @param w [String] WURCS format data
+    # @return [Float, nil] Mass or nil if an error occurs
     def getWURCSMass(w)
       importer = WURCSImporter.new
       wurcs_array = importer.extractWURCSArray(w)

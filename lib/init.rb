@@ -4,32 +4,11 @@ require 'fileutils'
 require 'yaml'
 
 module Init
-  def self.load_settings(file_path, flag)
-    downloads = []
 
-    unless Dir.exist?(ENV['HOME'] + "/.glycobook")
-      Dir.mkdir(ENV['HOME'] + "/.glycobook")
-    end
-
-    folder_path = File.dirname(__FILE__) + "/jar"
-    unless Dir.exist?(folder_path)
-      FileUtils.mkdir_p(folder_path)
-    end
-
-    if File.exist?(file_path)
-      downloads = YAML.load_file(file_path)
-    else
-      FileUtils.cp(File.dirname(File.expand_path(__FILE__)) + "/../jar.yml", file_path)
-    end
-
-    if flag
-      FileUtils.cp(File.dirname(File.expand_path(__FILE__)) + "/../jar.yml", file_path)
-      downloads = YAML.load_file(file_path)
-    end
-
-    downloads
-  end
-
+  # Runs the initialization process to resolve Java dependencies.
+  #
+  # Prompts the user for input on whether to resolve dependencies and set recommended versions.
+  # Downloads the necessary libraries based on the settings in the YAML file.
   def self.run
     puts <<-EOT
 Would you like to resolve Java dependencies? (No/yes)
@@ -56,7 +35,7 @@ Set recommended Java library version? (No/yes)
 
     downloads = load_settings(ENV['HOME'] + "/.glycobook/jar.yml", flag)
 
-    # ダウンロードを実行する
+    # Execute the downloads
     downloads["libraries"].each do |download|
       url = URI(download["url"])
       http = Net::HTTP.new(url.host, url.port)
@@ -88,5 +67,35 @@ Set recommended Java library version? (No/yes)
       end
     end
   end
-end
 
+  # Loads the settings from a YAML file and prepares the environment.
+  #
+  # @param file_path [String] The path to the settings file.
+  # @param flag [Boolean] Whether to use the recommended Java library version.
+  # @return [Array<Hash>] The list of downloads specified in the settings file.
+  def self.load_settings(file_path, flag)
+    downloads = []
+
+    unless Dir.exist?(ENV['HOME'] + "/.glycobook")
+      Dir.mkdir(ENV['HOME'] + "/.glycobook")
+    end
+
+    folder_path = File.dirname(__FILE__) + "/jar"
+    unless Dir.exist?(folder_path)
+      FileUtils.mkdir_p(folder_path)
+    end
+
+    if File.exist?(file_path)
+      downloads = YAML.load_file(file_path)
+    else
+      FileUtils.cp(File.dirname(File.expand_path(__FILE__)) + "/../jar.yml", file_path)
+    end
+
+    if flag
+      FileUtils.cp(File.dirname(File.expand_path(__FILE__)) + "/../jar.yml", file_path)
+      downloads = YAML.load_file(file_path)
+    end
+
+    downloads
+  end
+end
