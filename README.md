@@ -58,6 +58,9 @@ ruby -r init -e Init.run
 gem build glydevkit.gemspec
 ```
 
+## **API reference**
+https://akihirof0005.github.io/glydevkit/index.html
+
 ## sample program
 
 ```ruby
