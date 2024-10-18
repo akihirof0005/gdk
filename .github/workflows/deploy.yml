@@ -23,7 +23,7 @@ jobs:
         gem install yard
 
     - name: Generate YARD docs
-      run: yard doc
+      run: yard doc --theme rdoc
 
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4
