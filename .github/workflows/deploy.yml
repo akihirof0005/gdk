@@ -26,8 +26,9 @@ jobs:
       run: yard doc
 
     - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
+      uses: JamesIves/github-pages-deploy-action@v4
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./doc
-
+        branch: gh-pages  # デプロイ先のブランチ
+        folder: ./doc     # 公開するフォルダ
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
