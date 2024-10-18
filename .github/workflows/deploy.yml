@@ -1,0 +1,33 @@
+name: Deploy YARD Docs
+
+on:
+  push:
+    branches:
+      - main  # mainブランチにpushされたときに実行
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.0'  # 使用しているRubyのバージョンを指定
+
+    - name: Install dependencies
+      run: |
+        gem install yard
+
+    - name: Generate YARD docs
+      run: yard doc
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./doc
+
