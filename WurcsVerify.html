@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: WurcsVerify
+  
+    &mdash; Documentation by YARD 0.9.37
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "WurcsVerify";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index (W)</a> &raquo;
+    
+    
+    <span class="title">WurcsVerify</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: WurcsVerify
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">WurcsVerify</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/wurcsverify.rb</dd>
+  </dl>
+  
+</div>
+
+
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="gtc_version-classvariable" class="">@@gtc_version =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1.2.14</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+      
+        <dt id="v1215-classvariable" class="">@@v1215 =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1.2.15</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+      
+        <dt id="v1216-classvariable" class="">@@v1216 =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1.2.16</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+      
+        <dt id="v130-classvariable" class="">@@v130 =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1.3.0</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+      
+        <dt id="v131-classvariable" class="">@@v131 =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1.3.1</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_custom_classloader-instance_method" title="#create_custom_classloader (instance method)">#<strong>create_custom_classloader</strong>(jar_path)  &#x21d2; URLClassLoader </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Creates a custom class loader for a given JAR file.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#dovalidator-instance_method" title="#dovalidator (instance method)">#<strong>dovalidator</strong>(validator, version)  &#x21d2; Hash </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Performs validation and returns basic reports.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#dovalidatorv3-instance_method" title="#dovalidatorv3 (instance method)">#<strong>dovalidatorv3</strong>(validator, version)  &#x21d2; Hash </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Performs validation and returns detailed reports for v3 style.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>  &#x21d2; WurcsVerify </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Initializes the WurcsVerify class.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#validatorVerify-instance_method" title="#validatorVerify (instance method)">#<strong>validatorVerify</strong>(w, style)  &#x21d2; Hash </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Verifies the WURCS string using different versions of the WURCS Framework.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="WurcsVerify (class)">WurcsVerify</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Initializes the WurcsVerify class.</p>
+
+<p>Sets up custom class loaders for different versions of the WURCS Framework. Loads the WURCSValidator classes for each version.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wurcsverify.rb', line 24</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span>
+    <span class='ivar'>@wfw_glytoucan_loader</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_create_custom_classloader'>create_custom_classloader</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>jar/wurcsframework-</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='cvar'>@@gtc_version</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.jar</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='ivar'>@wfw_v131_loader</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_create_custom_classloader'>create_custom_classloader</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>jar/wurcsframework-</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='cvar'>@@v131</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.jar</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='ivar'>@wfw_v130_loader</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_create_custom_classloader'>create_custom_classloader</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>jar/wurcsframework-</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='cvar'>@@v130</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.jar</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='ivar'>@wfw_v1216_loader</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_create_custom_classloader'>create_custom_classloader</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>jar/wurcsframework-</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='cvar'>@@v1216</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.jar</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='ivar'>@wfw_v1215_loader</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_create_custom_classloader'>create_custom_classloader</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>jar/wurcsframework-</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='cvar'>@@v1215</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.jar</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='ivar'>@validator_glytoucan</span> <span class='op'>=</span> <span class='id identifier rubyid_java'>java</span><span class='period'>.</span><span class='id identifier rubyid_lang'>lang</span><span class='period'>.</span><span class='const'>Class</span><span class='period'>.</span><span class='id identifier rubyid_forName'>forName</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>org.glycoinfo.WURCSFramework.util.validation.WURCSValidator</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span><span class='kw'>true</span><span class='comma'>,</span><span class='ivar'>@wfw_glytoucan_loader</span><span class='rparen'>)</span>
+    <span class='ivar'>@validator_v131</span> <span class='op'>=</span> <span class='id identifier rubyid_java'>java</span><span class='period'>.</span><span class='id identifier rubyid_lang'>lang</span><span class='period'>.</span><span class='const'>Class</span><span class='period'>.</span><span class='id identifier rubyid_forName'>forName</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>org.glycoinfo.WURCSFramework.util.validation.WURCSValidator</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='ivar'>@wfw_v131_loader</span><span class='rparen'>)</span>
+    <span class='ivar'>@validator_v130</span> <span class='op'>=</span> <span class='id identifier rubyid_java'>java</span><span class='period'>.</span><span class='id identifier rubyid_lang'>lang</span><span class='period'>.</span><span class='const'>Class</span><span class='period'>.</span><span class='id identifier rubyid_forName'>forName</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>org.glycoinfo.WURCSFramework.util.validation.WURCSValidator</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='ivar'>@wfw_v130_loader</span><span class='rparen'>)</span>
+    <span class='ivar'>@validator_v1216</span> <span class='op'>=</span> <span class='id identifier rubyid_java'>java</span><span class='period'>.</span><span class='id identifier rubyid_lang'>lang</span><span class='period'>.</span><span class='const'>Class</span><span class='period'>.</span><span class='id identifier rubyid_forName'>forName</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>org.glycoinfo.WURCSFramework.util.validation.WURCSValidator</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='ivar'>@wfw_v1216_loader</span><span class='rparen'>)</span>
+    <span class='ivar'>@validator_v1215</span> <span class='op'>=</span> <span class='id identifier rubyid_java'>java</span><span class='period'>.</span><span class='id identifier rubyid_lang'>lang</span><span class='period'>.</span><span class='const'>Class</span><span class='period'>.</span><span class='id identifier rubyid_forName'>forName</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>org.glycoinfo.WURCSFramework.util.validation.WURCSValidator</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='ivar'>@wfw_v1215_loader</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="create_custom_classloader-instance_method">
+  
+    #<strong>create_custom_classloader</strong>(jar_path)  &#x21d2; <tt>URLClassLoader</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Creates a custom class loader for a given JAR file.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>jar_path</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The path to the JAR file.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>URLClassLoader</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The custom class loader.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+41
+42
+43
+44
+45</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wurcsverify.rb', line 41</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_custom_classloader'>create_custom_classloader</span><span class='lparen'>(</span><span class='id identifier rubyid_jar_path'>jar_path</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_absolute_path'>absolute_path</span> <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_dirname'>dirname</span><span class='lparen'>(</span><span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_expand_path'>expand_path</span><span class='lparen'>(</span><span class='kw'>__FILE__</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_jar_path'>jar_path</span>
+  <span class='id identifier rubyid_url'>url</span> <span class='op'>=</span> <span class='const'>URL</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>file:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_absolute_path'>absolute_path</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='const'>URLClassLoader</span><span class='period'>.</span><span class='id identifier rubyid_newInstance'>newInstance</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='id identifier rubyid_url'>url</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_java'>to_java</span><span class='lparen'>(</span><span class='const'>URL</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_java'>java</span><span class='period'>.</span><span class='id identifier rubyid_lang'>lang</span><span class='period'>.</span><span class='const'>Thread</span><span class='period'>.</span><span class='id identifier rubyid_currentThread'>currentThread</span><span class='period'>.</span><span class='id identifier rubyid_getContextClassLoader'>getContextClassLoader</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="dovalidator-instance_method">
+  
+    #<strong>dovalidator</strong>(validator, version)  &#x21d2; <tt>Hash</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Performs validation and returns basic reports.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>validator</span>
+      
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The validator instance.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>version</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The version of the WURCS Framework.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The validation report.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+120
+121
+122
+123
+124
+125</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wurcsverify.rb', line 120</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_dovalidator'>dovalidator</span><span class='lparen'>(</span><span class='id identifier rubyid_validator'>validator</span><span class='comma'>,</span> <span class='id identifier rubyid_version'>version</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='lbrace'>{</span> 
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>VALIDATOR</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>WURCSFramework-</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_version'>version</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Report</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_validator'>validator</span><span class='period'>.</span><span class='id identifier rubyid_getReport'>getReport</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_getResults'>getResults</span><span class='lparen'>(</span><span class='rparen'>)</span> 
+  <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="dovalidatorv3-instance_method">
+  
+    #<strong>dovalidatorv3</strong>(validator, version)  &#x21d2; <tt>Hash</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Performs validation and returns detailed reports for v3 style.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>validator</span>
+      
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The validator instance.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>version</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The version of the WURCS Framework.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The validation report.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wurcsverify.rb', line 95</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_dovalidatorv3'>dovalidatorv3</span><span class='lparen'>(</span><span class='id identifier rubyid_validator'>validator</span><span class='comma'>,</span> <span class='id identifier rubyid_version'>version</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_validator'>validator</span><span class='period'>.</span><span class='id identifier rubyid_getReport'>getReport</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:isStandardized</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_flag'>flag</span> <span class='op'>=</span> <span class='id identifier rubyid_validator'>validator</span><span class='period'>.</span><span class='id identifier rubyid_getReport'>getReport</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_isStandardized'>isStandardized</span><span class='lparen'>(</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_flag'>flag</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>undef</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_reports'>reports</span> <span class='op'>=</span> <span class='lbrace'>{</span> 
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>VALIDATOR</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>WURCSFramework-</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_version'>version</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>WARNING</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_validator'>validator</span><span class='period'>.</span><span class='id identifier rubyid_getReport'>getReport</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_hasWarning'>hasWarning</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>FLAG</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_flag'>flag</span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ERROR</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_validator'>validator</span><span class='period'>.</span><span class='id identifier rubyid_getReport'>getReport</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_hasError'>hasError</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>UNVERIFIABLE</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_validator'>validator</span><span class='period'>.</span><span class='id identifier rubyid_getReport'>getReport</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_hasUnverifiable'>hasUnverifiable</span><span class='lparen'>(</span><span class='rparen'>)</span> 
+  <span class='rbrace'>}</span>
+  <span class='kw'>return</span> <span class='lbrace'>{</span> 
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>message</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_reports'>reports</span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>StandardWURCS</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_validator'>validator</span><span class='period'>.</span><span class='id identifier rubyid_getReport'>getReport</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_standard_string'>standard_string</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RESULTS</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_validator'>validator</span><span class='period'>.</span><span class='id identifier rubyid_getReport'>getReport</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_getResults'>getResults</span><span class='lparen'>(</span><span class='rparen'>)</span> 
+  <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="validatorVerify-instance_method">
+  
+    #<strong>validatorVerify</strong>(w, style)  &#x21d2; <tt>Hash</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Verifies the WURCS string using different versions of the WURCS Framework.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>w</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The WURCS string to verify.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>style</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The verification style (“v3” or “wfw”).</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The verification results.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wurcsverify.rb', line 52</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_validatorVerify'>validatorVerify</span><span class='lparen'>(</span><span class='id identifier rubyid_w'>w</span><span class='comma'>,</span> <span class='id identifier rubyid_style'>style</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_v_glytoucan'>v_glytoucan</span> <span class='op'>=</span> <span class='ivar'>@validator_glytoucan</span><span class='period'>.</span><span class='id identifier rubyid_new_instance'>new_instance</span>
+  <span class='id identifier rubyid_v_glytoucan'>v_glytoucan</span><span class='period'>.</span><span class='id identifier rubyid_start'>start</span><span class='lparen'>(</span><span class='id identifier rubyid_w'>w</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_v_131'>v_131</span> <span class='op'>=</span> <span class='ivar'>@validator_v131</span><span class='period'>.</span><span class='id identifier rubyid_new_instance'>new_instance</span>
+  <span class='id identifier rubyid_v_131'>v_131</span><span class='period'>.</span><span class='id identifier rubyid_start'>start</span><span class='lparen'>(</span><span class='id identifier rubyid_w'>w</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_v_130'>v_130</span> <span class='op'>=</span> <span class='ivar'>@validator_v130</span><span class='period'>.</span><span class='id identifier rubyid_new_instance'>new_instance</span>
+  <span class='id identifier rubyid_v_130'>v_130</span><span class='period'>.</span><span class='id identifier rubyid_start'>start</span><span class='lparen'>(</span><span class='id identifier rubyid_w'>w</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_v_1216'>v_1216</span> <span class='op'>=</span> <span class='ivar'>@validator_v1216</span><span class='period'>.</span><span class='id identifier rubyid_new_instance'>new_instance</span>
+  <span class='id identifier rubyid_v_1216'>v_1216</span><span class='period'>.</span><span class='id identifier rubyid_start'>start</span><span class='lparen'>(</span><span class='id identifier rubyid_w'>w</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_v_1215'>v_1215</span> <span class='op'>=</span> <span class='ivar'>@validator_v1215</span><span class='period'>.</span><span class='id identifier rubyid_new_instance'>new_instance</span>
+  <span class='id identifier rubyid_v_1215'>v_1215</span><span class='period'>.</span><span class='id identifier rubyid_start'>start</span><span class='lparen'>(</span><span class='id identifier rubyid_w'>w</span><span class='rparen'>)</span>
+
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_style'>style</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>v3</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_ret'>ret</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+      <span class='cvar'>@@gtc_version</span> <span class='op'>=&gt;</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_dovalidatorv3'>dovalidatorv3</span><span class='lparen'>(</span><span class='id identifier rubyid_v_glytoucan'>v_glytoucan</span><span class='comma'>,</span> <span class='cvar'>@@gtc_version</span><span class='rparen'>)</span><span class='comma'>,</span>
+      <span class='cvar'>@@v131</span> <span class='op'>=&gt;</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_dovalidatorv3'>dovalidatorv3</span><span class='lparen'>(</span><span class='id identifier rubyid_v_131'>v_131</span><span class='comma'>,</span> <span class='cvar'>@@v131</span><span class='rparen'>)</span><span class='comma'>,</span>
+      <span class='cvar'>@@v130</span> <span class='op'>=&gt;</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_dovalidatorv3'>dovalidatorv3</span><span class='lparen'>(</span><span class='id identifier rubyid_v_130'>v_130</span><span class='comma'>,</span> <span class='cvar'>@@v130</span><span class='rparen'>)</span><span class='comma'>,</span>
+      <span class='cvar'>@@v1215</span> <span class='op'>=&gt;</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_dovalidatorv3'>dovalidatorv3</span><span class='lparen'>(</span><span class='id identifier rubyid_v_1215'>v_1215</span><span class='comma'>,</span> <span class='cvar'>@@v1215</span><span class='rparen'>)</span><span class='comma'>,</span>
+      <span class='cvar'>@@v1216</span> <span class='op'>=&gt;</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_dovalidatorv3'>dovalidatorv3</span><span class='lparen'>(</span><span class='id identifier rubyid_v_1216'>v_1216</span><span class='comma'>,</span> <span class='cvar'>@@v1216</span><span class='rparen'>)</span>
+    <span class='rbrace'>}</span>
+  <span class='kw'>elsif</span> <span class='lparen'>(</span><span class='id identifier rubyid_style'>style</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>wfw</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_ret'>ret</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+      <span class='cvar'>@@gtc_version</span> <span class='op'>=&gt;</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_dovalidator'>dovalidator</span><span class='lparen'>(</span><span class='id identifier rubyid_v_glytoucan'>v_glytoucan</span><span class='comma'>,</span> <span class='cvar'>@@gtc_version</span><span class='rparen'>)</span><span class='comma'>,</span>
+      <span class='cvar'>@@v131</span> <span class='op'>=&gt;</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_dovalidator'>dovalidator</span><span class='lparen'>(</span><span class='id identifier rubyid_v_131'>v_131</span><span class='comma'>,</span> <span class='cvar'>@@v131</span><span class='rparen'>)</span><span class='comma'>,</span>
+      <span class='cvar'>@@v130</span> <span class='op'>=&gt;</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_dovalidator'>dovalidator</span><span class='lparen'>(</span><span class='id identifier rubyid_v_130'>v_130</span><span class='comma'>,</span> <span class='cvar'>@@v130</span><span class='rparen'>)</span><span class='comma'>,</span>
+      <span class='cvar'>@@v1215</span> <span class='op'>=&gt;</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_dovalidator'>dovalidator</span><span class='lparen'>(</span><span class='id identifier rubyid_v_1215'>v_1215</span><span class='comma'>,</span> <span class='cvar'>@@v1215</span><span class='rparen'>)</span><span class='comma'>,</span>
+      <span class='cvar'>@@v1216</span> <span class='op'>=&gt;</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_dovalidator'>dovalidator</span><span class='lparen'>(</span><span class='id identifier rubyid_v_1216'>v_1216</span><span class='comma'>,</span> <span class='cvar'>@@v1216</span><span class='rparen'>)</span>
+    <span class='rbrace'>}</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_pp'>pp</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>strange second paramerters</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_ret'>ret</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Oct 18 06:02:13 2024 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.37 (ruby-3.0.7).
+</div>
+
+    </div>
+  </body>
+</html>
