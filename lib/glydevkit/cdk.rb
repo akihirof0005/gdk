@@ -37,7 +37,7 @@ module GlyDevKit
         puts e.message
       end
     end
-
+    
     private
     
     def w2bit(w)
