@@ -4,6 +4,7 @@ require 'fileutils'
 require 'yaml'
 require 'digest'
 require 'fileutils'
+require 'terminal-table'
 
 
 module Init
@@ -89,7 +90,7 @@ Set recommended Java library version? (No/yes)
     end
   end
 
-  def self.check_WFW_version()
+  def self.show_WFW_version()
     target_file_path = File.dirname(__FILE__) + '/jar/wurcsframework.jar'  
     folder_path = File.dirname(__FILE__) + '/jar' 
   
@@ -106,6 +107,17 @@ Set recommended Java library version? (No/yes)
       end
     end
   end
+
+  def self.show_dependencies
+    yaml_data = File.read(Dir.home+'/.glycobook/jar.yml')
+    parsed_data = YAML.load(yaml_data)
+    rows = []
+    rows.push(["name","version","Link"])
+    parsed_data["libraries"].each{|item|
+      rows.push([item["name"].to_s , item["version"].to_s , item["info"].to_s ])
+    }
+    puts Terminal::Table.new rows: rows
+end
 
   private
   # Loads the settings from a YAML file and prepares the environment.

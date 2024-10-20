@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name          = 'glydevkit'
-  spec.version       = '0.2.0-beta.4'
+  spec.version       = '0.2.0-beta.5'
   spec.authors       = ['Akihiro Fujita']
   spec.email         = ['akihirof0005@gmail.com']
   spec.date          = '2024-10-18'
@@ -28,4 +28,6 @@ Gem::Specification.new do |spec|
                   }
   spec.platform       = 'java'
   spec.add_dependency 'java',  '~> 0.0.2'
+  spec.add_dependency 'yaml'
+  spec.add_dependency 'terminal-table'
 end

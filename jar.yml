@@ -92,6 +92,6 @@ libraries:
 
   - name: MolWURCS
     info: https://gitlab.com/glycoinfo/molwurcs
-    version: 0.10.2
-    url: https://gitlab.com/glycoinfo/molwurcs/-/package_files/89942780/download
+    version: 0.11.0
+    url: https://gitlab.com/glycoinfo/molwurcs/-/package_files/106726568/download
     file: jar/MolWURCS.jar
