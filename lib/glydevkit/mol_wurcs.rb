@@ -21,6 +21,12 @@ java_import 'java.util.ArrayList'
 java_import 'java.io.StringWriter'
 java_import 'java.io.IOException'
 java_import 'java.io.StringReader'
+java_import "org.openscience.cdk.interfaces.IAtomContainer"
+java_import "org.openscience.cdk.smiles.SmilesParser"
+java_import "org.glycoinfo.MolWURCS.exchange.toWURCS.MoleculeToWURCSGraph"
+java_import "org.glycoinfo.WURCSFramework.util.WURCSFactory"
+java_import "org.glycoinfo.WURCSFramework.wurcs.graph.WURCSGraph"
+java_import "org.openscience.cdk.interfaces.IAtomContainer"
 
 module GlyDevKit
 class MolWURCS
@@ -41,6 +47,19 @@ class MolWURCS
       end
     end
 
+    def mol2wurcs(smiles)
+      parser = SmilesParser.new(DefaultChemObjectBuilder.getInstance)
+      molecule = parser.parseSmiles(smiles)
+      begin
+        graphs = MoleculeToWURCSGraph.new.start(molecule)
+      rescue StandardError => e
+        puts "An error occurred: #{e.message}"
+        puts "This method currently only supports up to WURCSFramework version 1.2.16. You need to downgrade the WURCSFramework using the command: `ruby -r init -e \'Init.switch_WFW_version(\"1.2.16\")\'`."
+        raise
+      end
+      factory = WURCSFactory.new(graphs[0])
+      return {"wurcs": factory.getWURCS(), "input": smiles} 
+    end
     private
 
     # Reads WURCS and returns a molecule set
