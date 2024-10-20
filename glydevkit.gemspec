@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name          = 'glydevkit'
-  spec.version       = '0.2.0-beta.5'
+  spec.version       = '0.2.0-beta.6'
   spec.authors       = ['Akihiro Fujita']
   spec.email         = ['akihirof0005@gmail.com']
   spec.date          = '2024-10-18'
@@ -13,6 +13,7 @@ Gem::Specification.new do |spec|
                         "lib/glydevkit/glycan_format_converter.rb",
                         "lib/glydevkit/subsumption.rb",
                         "lib/glydevkit/gly_tou_can.rb",
+                        "lib/glydevkit/cdk.rb",
                         "lib/glydevkit/glytoucan_data_handler.rb",
                         "lib/glydevkit/glycan_builder.rb",
                         'lib/glydevkit/mol_wurcs.rb',
