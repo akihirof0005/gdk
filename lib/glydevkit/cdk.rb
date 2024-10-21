@@ -20,7 +20,7 @@ module GlyDevKit
       end
     end 
 
-    def mol2svg(smiles)
+    def mol2svg(smiles,scale)
       
       begin
         sp = SmilesParser.new(DefaultChemObjectBuilder.getInstance)
@@ -31,7 +31,7 @@ module GlyDevKit
         molecule = sdg.molecule
           
         depiction_gen = DepictionGenerator.new
-        return depiction_gen.withSize(30, 30).depict(molecule).toSvgStr
+        return depiction_gen.withSize(30, 30).depict(molecule).toSvg.sub(/width=\'30.0mm\' height=\'30.0mm\' /,"/width='#{30 * scale}.0mm' height='#{30 * scale}.0mm'")
       
       rescue => e
         puts e.message
