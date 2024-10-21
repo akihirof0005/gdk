@@ -116,7 +116,7 @@ Set recommended Java library version? (No/yes)
     rows.push(["name","version"])
     parsed_data["libraries"].each{|item|
       #rows.push([item["name"].to_s , item["version"].to_s , item["info"].to_s ])
-      rows.push([item["name"].to_s , item["version"].to_s )
+      rows.push([item["name"].to_s , item["version"].to_s] )
     }
     puts Terminal::Table.new rows: rows
 end
