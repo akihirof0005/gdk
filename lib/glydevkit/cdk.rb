@@ -31,7 +31,7 @@ module GlyDevKit
         molecule = sdg.molecule
           
         depiction_gen = DepictionGenerator.new
-        return depiction_gen.withSize(30, 30).depict(molecule).toSvg.sub(/width=\'30.0mm\' height=\'30.0mm\' /,"/width='#{30 * scale}.0mm' height='#{30 * scale}.0mm'")
+        return depiction_gen.withSize(30, 30).depict(molecule).toSvgStr.sub(/width=\'30.0mm\' height=\'30.0mm\' /,"/width='#{30 * scale}.0mm' height='#{30 * scale}.0mm'")
       
       rescue => e
         puts e.message
