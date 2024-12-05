@@ -1,9 +1,9 @@
 Gem::Specification.new do |spec|
   spec.name          = 'glydevkit'
-  spec.version       = '0.2.6'
+  spec.version       = '0.2.7'
   spec.authors       = ['Akihiro Fujita']
   spec.email         = ['akihirof0005@gmail.com']
-  spec.date          = '2024-10-29'
+  spec.date          = '2024-12-05'
   spec.summary       = 'The Glycoscience Development Kit (GlyDevKit) is a JRuby library for glyco-informatics'
   spec.description   = 'The Glycoscience Development Kit (GlyDevKit) is a JRuby library for glyco-informatics'
   spec.homepage      = 'https://github.com/akihirof0005/glydevkit/blob/main/README.md'

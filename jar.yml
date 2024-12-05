@@ -68,8 +68,8 @@ libraries:
 
   - name: archetype
     info: "https://gitlab.glyco.info/glycosmos/glytoucangroup/archetype/lib"
-    version: 0.1.7
-    url: "https://gitlab.glyco.info/glycosmos/glytoucangroup/archetype/lib/-/package_files/831/download"
+    version: 0.1.8
+    url: "https://gitlab.glyco.info/glycosmos/glytoucangroup/archetype/lib/-/package_files/850/download"
     file: "jar/archetype.jar"
 
   - name: glycanformatconverter
