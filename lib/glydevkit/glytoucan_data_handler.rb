@@ -32,11 +32,6 @@ module GlyDevKit
         @all_data["encode-wurcs-key"][encode(w)]
     end
 
-    private
-
-    require 'zlib'
-    java_import 'java.util.Base64'
-    
     def encode(input_string)
       compressed_data = Zlib::Deflate.deflate(input_string)
       encoder = Base64.getUrlEncoder()
@@ -49,6 +44,7 @@ module GlyDevKit
       Zlib::Inflate.inflate(String.from_java_bytes(compressed_data))
     end
     
+    private
 
     def sparql_query
         <<-EOS
