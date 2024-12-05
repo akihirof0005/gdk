@@ -151,6 +151,50 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#decode-instance_method" title="#decode (instance method)">#<strong>decode</strong>(encoded_string)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#encode-instance_method" title="#encode (instance method)">#<strong>encode</strong>(input_string)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#get_gtcid_by_wurcs-instance_method" title="#get_gtcid_by_wurcs (instance method)">#<strong>get_gtcid_by_wurcs</strong>(w)  &#x21d2; Object </a>
     
 
@@ -339,7 +383,75 @@
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="get_gtcid_by_wurcs-instance_method">
+  <h3 class="signature first" id="decode-instance_method">
+  
+    #<strong>decode</strong>(encoded_string)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+41
+42
+43
+44
+45</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/glydevkit/glytoucan_data_handler.rb', line 41</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_decode'>decode</span><span class='lparen'>(</span><span class='id identifier rubyid_encoded_string'>encoded_string</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_decoder'>decoder</span> <span class='op'>=</span> <span class='const'>Base64</span><span class='period'>.</span><span class='id identifier rubyid_getUrlDecoder'>getUrlDecoder</span><span class='lparen'>(</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_compressed_data'>compressed_data</span> <span class='op'>=</span> <span class='id identifier rubyid_decoder'>decoder</span><span class='period'>.</span><span class='id identifier rubyid_decode'>decode</span><span class='lparen'>(</span><span class='id identifier rubyid_encoded_string'>encoded_string</span><span class='rparen'>)</span>
+  <span class='const'>Zlib</span><span class='op'>::</span><span class='const'>Inflate</span><span class='period'>.</span><span class='id identifier rubyid_inflate'>inflate</span><span class='lparen'>(</span><span class='const'>String</span><span class='period'>.</span><span class='id identifier rubyid_from_java_bytes'>from_java_bytes</span><span class='lparen'>(</span><span class='id identifier rubyid_compressed_data'>compressed_data</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="encode-instance_method">
+  
+    #<strong>encode</strong>(input_string)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+35
+36
+37
+38
+39</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/glydevkit/glytoucan_data_handler.rb', line 35</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_encode'>encode</span><span class='lparen'>(</span><span class='id identifier rubyid_input_string'>input_string</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_compressed_data'>compressed_data</span> <span class='op'>=</span> <span class='const'>Zlib</span><span class='op'>::</span><span class='const'>Deflate</span><span class='period'>.</span><span class='id identifier rubyid_deflate'>deflate</span><span class='lparen'>(</span><span class='id identifier rubyid_input_string'>input_string</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_encoder'>encoder</span> <span class='op'>=</span> <span class='const'>Base64</span><span class='period'>.</span><span class='id identifier rubyid_getUrlEncoder'>getUrlEncoder</span><span class='lparen'>(</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_encoder'>encoder</span><span class='period'>.</span><span class='id identifier rubyid_encodeToString'>encodeToString</span><span class='lparen'>(</span><span class='id identifier rubyid_compressed_data'>compressed_data</span><span class='period'>.</span><span class='id identifier rubyid_to_java_bytes'>to_java_bytes</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_gtcid_by_wurcs-instance_method">
   
     #<strong>get_gtcid_by_wurcs</strong>(w)  &#x21d2; <tt>Object</tt> 
   
@@ -409,7 +521,7 @@
 </div>
 
       <div id="footer">
-  Generated on Thu Dec  5 04:55:30 2024 by
+  Generated on Thu Dec  5 05:06:22 2024 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.0.7).
 </div>
