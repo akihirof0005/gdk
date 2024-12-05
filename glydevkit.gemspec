@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name          = 'glydevkit'
-  spec.version       = '0.2.7'
+  spec.version       = '0.2.8'
   spec.authors       = ['Akihiro Fujita']
   spec.email         = ['akihirof0005@gmail.com']
   spec.date          = '2024-12-05'

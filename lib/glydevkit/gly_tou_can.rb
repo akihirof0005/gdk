@@ -4,6 +4,7 @@ require_relative '../jar/archetype.jar'
 require_relative '../jar/wurcsframework.jar'
 
 java_import 'org.glytoucan.Archetype'
+java_import 'org.glytoucan.util.Result'
 java_import 'org.glycoinfo.WURCSFramework.wurcs.graph.WURCSGraph'
 java_import 'org.glycoinfo.WURCSFramework.util.WURCSException'
 
@@ -19,7 +20,8 @@ module GlyDevKit
     #   glytoucan = GlyDevKit::GlyTouCan.new
     #   archetype = glytoucan.archetype("WURCS=2.0/...")
     def archetype(w)
-      Hash[Archetype.beBorn(w)]
+      result = Archetype.beBorn(w)
+      Hash[result.get_map_result]
     end
   end
 end
